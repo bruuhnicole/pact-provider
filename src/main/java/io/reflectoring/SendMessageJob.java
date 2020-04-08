@@ -26,7 +26,7 @@ class SendMessageJob {
 							.messageUuid(UUID.randomUUID().toString())
 							.product(Product.builder()
 											.id(random.nextLong())
-											.name("Zaphpod Beeblebrox")
+											.name("Batata")
 											.build())
 							.build();
 			messageProvider.providerProductCreatedMessage(productCreatedMessage);
