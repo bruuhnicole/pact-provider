@@ -1,11 +1,5 @@
 package com.product.message.util;
 
-import java.lang.reflect.Method;
-import java.util.List;
-import java.util.Map;
-import java.util.Set;
-import java.util.stream.Collectors;
-
 import au.com.dius.pact.model.Interaction;
 import au.com.dius.pact.model.v3.messaging.Message;
 import au.com.dius.pact.provider.ConsumerInfo;
@@ -15,6 +9,12 @@ import au.com.dius.pact.provider.ProviderVerifier;
 import org.reflections.Reflections;
 import org.reflections.scanners.MethodAnnotationsScanner;
 import org.reflections.util.ConfigurationBuilder;
+
+import java.lang.reflect.Method;
+import java.util.List;
+import java.util.Map;
+import java.util.Set;
+import java.util.stream.Collectors;
 
 public class CustomProviderVerifier extends ProviderVerifier {
 

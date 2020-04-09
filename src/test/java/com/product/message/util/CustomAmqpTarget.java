@@ -1,7 +1,5 @@
 package com.product.message.util;
 
-import java.util.List;
-
 import au.com.dius.pact.model.Interaction;
 import au.com.dius.pact.model.ProviderState;
 import au.com.dius.pact.provider.ConsumerInfo;
@@ -9,6 +7,8 @@ import au.com.dius.pact.provider.ProviderInfo;
 import au.com.dius.pact.provider.ProviderVerifier;
 import au.com.dius.pact.provider.junit.target.AmqpTarget;
 import org.jetbrains.annotations.NotNull;
+
+import java.util.List;
 
 /**
  * Custom implementation of {@link AmqpTarget} since with {@link AmqpTarget}

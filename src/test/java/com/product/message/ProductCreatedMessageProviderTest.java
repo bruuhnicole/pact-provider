@@ -1,9 +1,5 @@
 package com.product.message;
 
-import java.io.IOException;
-import java.util.Collections;
-import java.util.UUID;
-
 import au.com.dius.pact.provider.PactVerifyProvider;
 import au.com.dius.pact.provider.junit.PactRunner;
 import au.com.dius.pact.provider.junit.Provider;
@@ -11,12 +7,15 @@ import au.com.dius.pact.provider.junit.loader.PactFolder;
 import au.com.dius.pact.provider.junit.target.Target;
 import au.com.dius.pact.provider.junit.target.TestTarget;
 import com.fasterxml.jackson.databind.ObjectMapper;
-import com.product.message.MessageProvider;
-import com.product.message.MessagePublisher;
 import com.product.message.util.CustomAmqpTarget;
 import org.junit.runner.RunWith;
 import org.mockito.ArgumentCaptor;
 import org.mockito.Mockito;
+
+import java.io.IOException;
+import java.util.Collections;
+import java.util.UUID;
+
 import static org.mockito.Mockito.*;
 
 @RunWith(PactRunner.class)

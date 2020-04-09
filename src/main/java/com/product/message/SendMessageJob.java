@@ -1,10 +1,10 @@
 package com.product.message;
 
+import org.springframework.scheduling.annotation.Scheduled;
+
 import java.io.IOException;
 import java.util.Random;
 import java.util.UUID;
-
-import org.springframework.scheduling.annotation.Scheduled;
 
 class SendMessageJob {
 
