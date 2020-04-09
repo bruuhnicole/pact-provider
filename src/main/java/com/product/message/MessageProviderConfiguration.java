@@ -1,4 +1,4 @@
-package io.reflectoring;
+package com.product.message;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
 import org.springframework.amqp.core.TopicExchange;

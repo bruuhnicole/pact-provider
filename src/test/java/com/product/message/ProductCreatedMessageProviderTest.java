@@ -1,4 +1,4 @@
-package io.reflectoring;
+package com.product.message;
 
 import java.io.IOException;
 import java.util.Collections;
@@ -11,6 +11,9 @@ import au.com.dius.pact.provider.junit.loader.PactFolder;
 import au.com.dius.pact.provider.junit.target.Target;
 import au.com.dius.pact.provider.junit.target.TestTarget;
 import com.fasterxml.jackson.databind.ObjectMapper;
+import com.product.message.MessageProvider;
+import com.product.message.MessagePublisher;
+import com.product.message.util.CustomAmqpTarget;
 import org.junit.runner.RunWith;
 import org.mockito.ArgumentCaptor;
 import org.mockito.Mockito;
@@ -18,17 +21,17 @@ import static org.mockito.Mockito.*;
 
 @RunWith(PactRunner.class)
 @Provider("productservice")
-@PactFolder("../pact-message-consumer/target/pacts")
+@PactFolder("../pact-consumer/target/pacts")
 public class ProductCreatedMessageProviderTest {
 
 	@TestTarget
-	public final Target target = new CustomAmqpTarget(Collections.singletonList("io.reflectoring"));
+	public final Target target = new CustomAmqpTarget(Collections.singletonList("com.product.message"));
 
 	private MessagePublisher publisher = Mockito.mock(MessagePublisher.class);
 
 	private MessageProvider messageProvider = new MessageProvider(new ObjectMapper(), publisher);
 
-	@PactVerifyProvider("a product created")
+	@PactVerifyProvider("a product created message")
 	public String verifyProductCreatedMessage() throws IOException {
 		// given
 		doNothing().when(publisher).publishMessage(any(String.class), eq("product.created"));

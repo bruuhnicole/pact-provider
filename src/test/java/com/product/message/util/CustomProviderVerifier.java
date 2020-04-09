@@ -1,4 +1,4 @@
-package io.reflectoring;
+package com.product.message.util;
 
 import java.lang.reflect.Method;
 import java.util.List;
@@ -26,7 +26,7 @@ public class CustomProviderVerifier extends ProviderVerifier {
 
 	@Override
 	public boolean verifyResponseByInvokingProviderMethods(ProviderInfo providerInfo, ConsumerInfo consumer,
-																												 Object interaction, String interactionMessage, Map failures) {
+														   Object interaction, String interactionMessage, Map failures) {
 		try {
 
 			ConfigurationBuilder configurationBuilder = new ConfigurationBuilder()

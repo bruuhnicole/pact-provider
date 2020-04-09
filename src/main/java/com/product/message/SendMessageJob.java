@@ -1,4 +1,4 @@
-package io.reflectoring;
+package com.product.message;
 
 import java.io.IOException;
 import java.util.Random;

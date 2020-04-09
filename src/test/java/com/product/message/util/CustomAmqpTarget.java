@@ -1,4 +1,4 @@
-package io.reflectoring;
+package com.product.message.util;
 
 import java.util.List;
 

@@ -1,4 +1,4 @@
-package io.reflectoring;
+package com.product.message;
 
 import javax.validation.constraints.NotNull;
 
@@ -7,12 +7,12 @@ import lombok.Data;
 
 @Data
 @Builder
-class Product {
+class ProductCreatedMessage {
 
 	@NotNull
-	private long id;
+	private String messageUuid;
 
 	@NotNull
-	private String name;
+	private Product product;
 
 }

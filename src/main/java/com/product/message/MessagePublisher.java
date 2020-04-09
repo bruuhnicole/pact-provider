@@ -1,4 +1,4 @@
-package io.reflectoring;
+package com.product.message;
 
 import org.springframework.amqp.core.TopicExchange;
 import org.springframework.amqp.rabbit.core.RabbitTemplate;
